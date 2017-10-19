@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function soloEntero(e){
+                var keynum;
+            if(window.event)
+                keynum = e.keyCode;
+            else 
+                if (e.which)
+                    keynum=e.which;
+            
+            if ((keynum>=48&&keynum<=57) || keynum === 8)
+                return true;
+            else
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <form name="vectores" method="post" action="calcular">
+                Magnitud (Vector 1)
+                <input type="text" name="mag1" onkeypress="return soloEntero(event)">
+                <br><br>
+                Angulo (Vector 1)
+                <input type="text" name="ang1" onkeypress="return soloEntero(event)" maxlength="3" >
+                <br><br>
+                Magnitud (Vector 2)
+                <input type="text" name="mag2" onkeypress="return soloEntero(event)">
+                <br><br>
+                Angulo (Vector 2)
+                <input type="text" name="ang2" onkeypress="return soloEntero(event)" maxlength="3">
+                <br><br>
+                <br>
+                <input type="submit"  value="Calcular">
+            </form>
+        </div>
+    </body>
+</html>
